@@ -3,7 +3,7 @@
 
 rasterizer made only using sdl and pure software/CPU rendering no GPU
 
-sdl only used for creating window and drawing individual pixels on that window
+sdl only used for creating window, drawing individual pixels on that window, and loading .bmp
 
 rasterizer features:
 - Wireframe rendering
