@@ -7,6 +7,7 @@ sdl only used for creating window, drawing individual pixels on that window, and
 
 rasterizer features:
 - Wireframe rendering
+- Depth buffering
 - Illumination/shading via point light on camera
 - Simple .OBJ file parser/renderer (can only parse/render obj with vertices and triangular faces)
 - Simple clipping
