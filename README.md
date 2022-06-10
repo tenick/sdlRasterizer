@@ -21,22 +21,22 @@ renders 15-100~ fps on average (depends on scene and rendering method)
 ### Cube Wireframe and Texture Mapped Rendering with position and rotation applied to cubes, FPS controls, and simple clipping
 #### <i>Rendering with texture is kinda buggy</i>
 <div>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo1.gif" width="500" height="500"/>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo6.gif" width="500" height="500"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo1.gif" width="400" height="400"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo6.gif" width="400" height="400"/>
 </div>
 
 ### Cow Wireframe and Shaded Rendering
 
 <div>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo2.gif" width="500" height="500"/>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo4.gif" width="500" height="500"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo2.gif" width="400" height="400"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo4.gif" width="400" height="400"/>
 </div>
 
 ### Teapot Wireframe and Shaded Rendering
 
 <div>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo3.gif" width="500" height="500"/>
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo5.gif" width="500" height="500"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo3.gif" width="400" height="400"/>
+  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo5.gif" width="400" height="400"/>
 </div>
 
 ## Rendering of simple scene with shading
