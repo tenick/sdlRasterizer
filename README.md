@@ -39,7 +39,6 @@ renders 15-100~ fps on average (depends on scene and rendering method)
   <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo5.gif" width="500" height="500"/>
 </div>
 
-<div>
-  ### Simple scene demo with shaded rendering
-  <img src="https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo5.gif" width="1000" height="1000"/>
-</div>
+## Rendering of simple scene with shading
+#### <i>Rendering with texture is kinda buggy</i>
+![rasterizerDemo](https://github.com/tenick/sdlRasterizer/blob/master/gitResources/rasterizerDemo7.gif)
