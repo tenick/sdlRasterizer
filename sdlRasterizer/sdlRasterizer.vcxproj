@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Cow.cpp" />
     <ClCompile Include="src\Cube.cpp" />
     <ClCompile Include="src\OBJParser.cpp" />
     <ClCompile Include="src\Rasterizer.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="h\Camera.h" />
+    <ClInclude Include="h\Cow.h" />
     <ClInclude Include="h\Cube.h" />
     <ClInclude Include="h\Object.h" />
     <ClInclude Include="h\OBJParser.h" />

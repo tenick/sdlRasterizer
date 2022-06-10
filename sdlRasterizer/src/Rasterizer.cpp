@@ -2,6 +2,7 @@
 #include "h/Object.h"
 #include <h/Cube.h>
 #include <h/Teapot.h>
+#include <h/Cow.h>
 
 Rasterizer::Rasterizer() 
 {
@@ -55,7 +56,8 @@ void Rasterizer::Start() {
 	//// testing area done
 
 	// load model and textures
-	Teapot::LoadModel(".\\res\\cow-nonormals.obj");
+	Teapot::LoadModel(".\\res\\teapot.obj");
+	Cow::LoadModel(".\\res\\cow-nonormals.obj");
 
 	SDL_Surface* surface = SDL_LoadBMP(".\\res\\crate-texture.bmp");
 	Uint32 pf = SDL_GetWindowPixelFormat(m_Window);
@@ -77,30 +79,52 @@ void Rasterizer::Start() {
 	
 
 	std::vector<Object*> objects;
-	Cube* x;
-	Cube c1(Vec3{ -6,2,7 });
-	Cube c2(Vec3{ -1,0,7 }, .5);
-	Cube c3(Vec3{ 3,0,7 });
-	Cube c4(Vec3{ 5,0,7 });
-	Cube c5(Vec3{ 7,0,7 });
-	Cube c6(Vec3{ 9,0,7 });
-	Cube c7(Vec3{ 12,0,7 });
-	Cube c8(Vec3{ 15,0,7 });
-	Teapot t1(Vec3{ 22,0,7 });
-	Teapot t2(Vec3{ 0,0,15 });
+	/*Cube c1(Vec3{ -7,2,7 });
+	c1.m_scale = 1.5;
+	Cube c2(Vec3{ 0, 0, 7 });
+	Cube c3(Vec3{ 0, 2, 7 });
+	Cube c4(Vec3{ 8,2,9 });
+	c4.m_rotation = Vec3{ M_PI / 3, M_PI };
+	c4.m_scale = 2.5;
 
-	c1.m_scale = 2;
 	objects.push_back(&c1);
 	objects.push_back(&c2);
 	objects.push_back(&c3);
-	objects.push_back(&c4);
-	objects.push_back(&c5);
-	objects.push_back(&c6);
-	objects.push_back(&c7);
-	objects.push_back(&c8);
-	objects.push_back(&t1);
-	objects.push_back(&t2);
+	objects.push_back(&c4);*/
+	/*Camera::MoveSpeed = .5;
+	Cow c1(Vec3{ 0,0,15 });
 
+	objects.push_back(&c1);*/
+
+	/*Camera::MoveSpeed = .5;
+	Teapot c1(Vec3{ 0,-1.5, 8 });
+
+	objects.push_back(&c1);*/
+
+	Cube c1(Vec3{ 3,-2, 10 });
+	c1.m_scale = 2;
+	Cube c2(Vec3{ 2.8, 1.2, 10.8 });
+	c2.m_rotation = Vec3{0, M_PI / 5 };
+	c2.m_scale = 1.3;
+	Cube c3(Vec3{ 4.5, .5, 8.5 });
+	c3.m_rotation = Vec3{ 0, -M_PI / 7 };
+	c3.m_scale = .5;
+
+
+
+	Teapot t1(Vec3{ -.5, -4, 10 });
+	t1.m_rotation = Vec3{ 0, M_PI / 4};
+	t1.m_scale = .5;
+
+	Cow co1(Vec3{ -.5, -1, 15 });
+	co1.m_rotation = Vec3{ 0, -M_PI/ 4 + M_PI };
+	co1.m_scale = .8;
+
+	objects.push_back(&c1);
+	objects.push_back(&c2);
+	objects.push_back(&c3);
+	objects.push_back(&t1);
+	objects.push_back(&co1);
 
 	SDL_RenderPresent(m_Renderer);
 	
@@ -194,7 +218,7 @@ void Rasterizer::Start() {
 		// draw all objects
 		for (Object*& obj : objects) {
 			//obj->m_rotation.x += .001 * obj->m_scale;
-			//obj->m_rotation.y += .001 * obj->m_scale;
+			//obj->m_rotation.y += .04 * obj->m_scale;
 
 			std::vector<Vec3> objVertices = obj->GetVertices();
 			Sphere boundSphere = obj->GetBoundingShpere();
@@ -249,6 +273,11 @@ void Rasterizer::Start() {
 				double h1 = Illuminate(cameraPtTriangleV2, triangleSurfaceNormal);
 				double h2 = Illuminate(cameraPtTriangleV3, triangleSurfaceNormal);
 
+				//// wireframe rendering
+				//SDL_SetRenderDrawColor(m_Renderer, triDef.Color.R, triDef.Color.G, triDef.Color.B, 255);
+				//DrawWireFrameTriangle(v0, v1, v2);
+
+				// shaded rendering
 				if (!(triDef.UV0.x == triDef.UV1.x && triDef.UV1.x == triDef.UV2.x)) {
 					DrawTextureMappedTriangle(v0, v1, v2, triDef.UV0, triDef.UV1, triDef.UV2, triDef.Color, h0, h1, h2);
 				}
