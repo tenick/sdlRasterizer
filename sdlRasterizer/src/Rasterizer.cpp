@@ -101,6 +101,7 @@ void Rasterizer::Start() {
 
 	objects.push_back(&c1);*/
 
+	Camera::MoveSpeed = .4;
 	Cube c1(Vec3{ 3,-2, 10 });
 	c1.m_scale = 2;
 	Cube c2(Vec3{ 2.8, 1.2, 10.8 });
